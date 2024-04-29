@@ -1,47 +1,52 @@
-import sqlite3
-from Src.Controlers.Functions import NovoContato # VERIFICAR
+from peewee import * # ORM de banco de dados minimalista para python
 
-class BancoDeDados:
-    def Conectar(self, BancoDeDadosContatos):
-        self.conn = sqlite3.connect(BancoDeDadosContatos)
+from Src.Views.Lines.LinesViews import Lines
+linha1, linha2, linha3, linha4, linha5, linha6, linha7, linha8, linha9, linha10 = Lines()
 
-    def Desconectar(self):
-        self.conn.close()
+db = SqliteDatabase('Src/Models/BancoDeDadosContatos.db')
 
-    def CriarTabela(self):
-        cursor = self.conn.cursor()
-        cursor.execute('''
-        CREATE TABLE IF NOT EXISTS Contatos (
-            id INTEGER PRIMARY KEY,
-            Nome TEXT,
-            Numero TEXT,
-            Email TEXT,
-            IdContato TEXT
-        )
-        ''')
-        self.conn.commit()
+class Contato(Model):
+    nome = CharField()
+    numero = DecimalField(unique=True)
+    email = CharField(unique=True)
 
-    def InserirDados(self, ContatosIndividuais):
-        cursor = self.conn.cursor()
-        cursor.execute('''
-        INSERT INTO Contatos (Nome, Numero, Email)
-        VALUES (?,?,?)
-        ''', (ContatosIndividuais['Nome'], ContatosIndividuais['Numero'], ContatosIndividuais['Email']))
-        self.conn.commit()
-
-    def ProcessarContatos(self):
-        ContatosIndividuais = NovoContato()  # VERIFICAR
-        self.InserirDados(ContatosIndividuais)
-
-
-def ChamarBancoDeDados():
-    bd = BancoDeDados()
-    bd.Conectar('Src/Models/BancoDeDadosContatos.db')
-    bd.CriarTabela()
-    bd.ProcessarContatos(nome, numero, email)
-    bd.Desconectar()
+    class Meta:
+        database = db 
 
 
 
+def CriarBancoDeDados():
+    try:
+        db.connect()
+        db.create_tables([Contato])
+    except Exception as error:
+        print(f'Erro ao criar banco de dados: {error}')
+    else:
+        print(f'Banco de dados criado com sucesso!')
+    return CriarBancoDeDados
+        
 
-# NÃO ESTOU CONSEGUINDO ADICIONAR OS DADOS NO BANCO DE DADOS 
+def CriarContato(nome, numero, email):
+    try:
+        contato = Contato.create(nome=nome, numero=numero, email=email)
+    except Exception as error:
+        print(f'Erro ao criar contato: {error}')
+    else: 
+        print('Contato criado com sucesso!')
+        
+    return CriarContato
+
+
+def ExibirContatos():
+    for c in Contato:
+        print(linha1)
+        print("- ", c.id ,"Nome: ", c.nome, "Número: ", c.numero, "Email: ", c.email)
+    print(linha1)
+        
+
+
+
+def AlterarContato():
+    
+#def ExcluirContato():
+

@@ -1,10 +1,11 @@
-from Src.Views.Interface.InterfaceUsuario import menuDeApresentacao, Menu1
-from Src.Controlers.Functions import AcaoMenu1, NovoContato
-from Src.Models.LogicaBancoDeDados import ChamarBancoDeDados
+from Src.Views.Interface.InterfaceUsuario import menuDeApresentacao, Menu1, Menu2
+from Src.Controlers.Functions import AcaoMenu1, NovoContato, AcaoMenu2
 
 menuDeApresentacao()
 Menu1()
 AcaoMenu1()
+Menu2()
+AcaoMenu2()
 
 
 

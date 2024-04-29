@@ -7,11 +7,18 @@ VERMELHO, VERDE, AMARELO, AZUL, MAGENTA, CIANO, BRANCO, RESET = Cores()
 
 def menuDeApresentacao():
     print(linha3)
-    print(f'{MAGENTA}AGENDA DE CONTATOS{RESET} {VERDE}V1.1.2{RESET}'.center(80))
+    print(f'{MAGENTA}AGENDA DE CONTATOS{RESET} {VERDE}V1.1.2{RESET}'.center(120))
     print(linha3)
 
 
 def Menu1():
     print(f'{CIANO}[1]{RESET}- {AZUL}Adicionar novo contato.{RESET}')
     print(f'{CIANO}[2]{RESET}- {AZUL}Ver lista de contatos.{RESET}')
+    print(linha3)
+
+
+def Menu2():
+    print(linha3)
+    print(f'{CIANO}[1]-{RESET}{AZUL}Alterar Dados DO contato.{RESET}')
+    print(f'{CIANO}[2]-{RESET}{AZUL}Deletar Contato.{RESET}')
     print(linha3)

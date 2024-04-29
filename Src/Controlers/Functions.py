@@ -2,9 +2,14 @@
 from Src.Views.Lines.LinesViews import Lines
 linha1, linha2, linha3, linha4, linha5, linha6, linha7, linha8, linha9, linha10 = Lines()
 
+from Src.Views.Colors.ColorsViews import Cores
+VERMELHO, VERDE, AMARELO, AZUL, MAGENTA, CIANO, BRANCO, RESET = Cores()
+
 from Src.Models.LogicaBancoDeDados import *
 
 from Src.Controlers.Validation import *
+
+from Src.Models.LogicaBancoDeDados import CriarContato, CriarBancoDeDados, ExibirContatos
 
 # Aqui se encontra as funções de logica para  entrada de dados do usuario
 
@@ -16,15 +21,28 @@ class Contato:
         self.Numero = Numero
         
 
-ContatosIndividuais = {}
+
 
 def AcaoMenu1():
+    print(MAGENTA + linha4 + RESET)
     opc = input('Opção: ')
+    print(MAGENTA + linha4 + RESET)
 
     if opc == '1':
         NovoContato()
     elif opc == '2':
-        print(BancoDeDadosContatos.db)
+        ExibirContatos()
+
+
+def AcaoMenu2():
+    print(MAGENTA + linha4 + RESET)
+    opc = input('Opção: ')
+    print(MAGENTA + linha4 + RESET)
+
+    if opc == '1':
+        print('ok')
+    elif opc == '2':
+        print('ok')
 
 
 def Nome():
@@ -32,9 +50,8 @@ def Nome():
             nome = input('Nome: ')
             print(linha1)
             if ValidarNome(nome):
-                ContatosIndividuais['Nome'] = nome
                 break
-    return Nome
+    return nome
 
 
 def Numero():
@@ -42,9 +59,8 @@ def Numero():
         numero = input('Numero Celular: ')
         print(linha1)
         if ValidarNumero(numero):
-            ContatosIndividuais['Numero'] = numero
             break
-    return Numero 
+    return numero 
 
 
 def Email():
@@ -52,19 +68,19 @@ def Email():
         email = input('Email: ')
         print(linha1)
         if ValidarEmail(email):
-            ContatosIndividuais['Email'] = email
             break
-    return Email
+    return email
 
     
 
 def NovoContato():
-    Nome()
-    Numero()
-    Email()
-    print(ContatosIndividuais)
-    ChamarBancoDeDados()
+    nome = Nome()
+    numero = Numero()
+    email = Email()
+    #CriarBancoDeDados()
+    CriarContato(nome, numero, email)
 
-    return Nome, Numero, Email
+
+    
     
 
