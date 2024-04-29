@@ -45,8 +45,37 @@ def ExibirContatos():
         
 
 
-
-def AlterarContato():
+def FiltrarContato():
+   while True:
+    try:
+        id_contato = int(input('ID: '))
+        contato_selecionado = Contato.get_or_none(Contato.id == id_contato)
+        if contato_selecionado:
     
+            print(linha1)
+            print("Contato selecionado:", contato_selecionado.nome)
+            print(linha1)
+            break
+        else:
+            print("ID do contato não encontrado. Tente novamente.")
+    except ValueError:
+        print("Por favor, digite um número válido.")
+        
+        return contato_selecionado
+
+
+# Refatorar essa função
+def AlterarContato():
+    contato_selecionado = ExibirContatos()
+    contato = Contato.get(Contato.id == contato_selecionado)
+    opcao = input('Informe o que deseja alterar: ')
+    escolha_usuario = input('Informe o novo dado: ')
+    contato.opcao = escolha_usuario
+    contato.save()
+    print('Contato Atualizado:', contato)
+
+
+
+
 #def ExcluirContato():
 

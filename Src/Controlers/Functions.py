@@ -9,7 +9,9 @@ from Src.Models.LogicaBancoDeDados import *
 
 from Src.Controlers.Validation import *
 
-from Src.Models.LogicaBancoDeDados import CriarContato, CriarBancoDeDados, ExibirContatos
+from Src.Models.LogicaBancoDeDados import CriarContato, CriarBancoDeDados, ExibirContatos, FiltrarContato
+
+from Src.Views.Interface.InterfaceUsuario import MenuAtualizacao
 
 # Aqui se encontra as funções de logica para  entrada de dados do usuario
 
@@ -21,9 +23,9 @@ class Contato:
         self.Numero = Numero
         
 
+# Ações dos menus de iteração
 
-
-def AcaoMenu1():
+def AcaoMenu1(): # Menu de apresentação Para criação dos contatos
     print(MAGENTA + linha4 + RESET)
     opc = input('Opção: ')
     print(MAGENTA + linha4 + RESET)
@@ -34,16 +36,31 @@ def AcaoMenu1():
         ExibirContatos()
 
 
-def AcaoMenu2():
+def AcaoMenu2(): # seleção do contato para alterações posteriormente
+    print(MAGENTA + linha4 + RESET)
+    FiltrarContato()
+    print(MAGENTA + linha4 + RESET)
+
+    
+
+
+def AcaoMenu3(): # Menu de alteração dos contatos
     print(MAGENTA + linha4 + RESET)
     opc = input('Opção: ')
     print(MAGENTA + linha4 + RESET)
 
     if opc == '1':
-        print('ok')
+        MenuAtualizacao()
+        #AlterarContato()
     elif opc == '2':
         print('ok')
 
+
+#def AcaoMenuAualizacao():  PRECISO TERMINAR ESSA FUNÇÃO
+
+
+
+# Coleta dos dados do usuario
 
 def Nome():
     while True:
@@ -84,3 +101,4 @@ def NovoContato():
     
     
 
+# VERIFICAR SE AS FUNÇÕES ESTAO CORRETAS
