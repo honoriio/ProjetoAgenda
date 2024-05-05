@@ -4,8 +4,8 @@ from Src.Controlers.Functions import AcaoMenu1, NovoContato, AcaoMenu2, AcaoMenu
 menuDeApresentacao()
 Menu1()
 AcaoMenu1()
-Menu2()
-AcaoMenu2()
+#Menu2()
+#AcaoMenu2()
 Menu3()
 AcaoMenu3()
 

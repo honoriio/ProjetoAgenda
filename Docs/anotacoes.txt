@@ -1,0 +1,14 @@
+#Coisas que precisam ser mudadas no progrma 
+
+
+1- Verificar a logica para caso de dados inseridos errados nos menus do programa 
+
+2- Refatorar as saidas de dados para os usuarios, pois, esta sendo exebido coisa a mais e coisa errada 
+
+3- Verificar o por que de estar dadndo erro ao tentar atualizar o numero do contato
+
+4- Verificar a logica do banco de dados que faz a atualização dos contatos, pois tem algo de errado na hora de atualziar o numero do contato
+
+5- Pesquisar sobre teste atomatizado e criar os testes automatizados para a aplicação que estamos criando
+
+6- 
