@@ -51,7 +51,7 @@ def AcaoMenu3(): # Menu de alteração dos contatos
 
     if opc == '1':
         MenuAtualizacao()
-        #AlterarContato()
+        AlterarContato()
     elif opc == '2':
         print('ok')
 
