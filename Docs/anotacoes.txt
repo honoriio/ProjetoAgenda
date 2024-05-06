@@ -14,3 +14,6 @@
 6- Aplicar as validações na função de atualização de dados que esta na logica de banco de dados 
 
 ##7- Criar a função de excluir contato. # Feito
+
+8- Refatorar a logica do codigo de execução do meu programa inteiro, preciso melhorar a logica do mesmo e tambem mudar a forma da seleção do contato para poder fazer alterações e excluções
+

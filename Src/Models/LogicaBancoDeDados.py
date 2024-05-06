@@ -75,7 +75,7 @@ def FiltrarContato():
             
 
 
-# Entender o que essa parte faz exatamente, pois foi corrigida pelo gpt
+# Preciso mudar essa função..... fazer com que a mesma use a função filtrar para selecionar o contato
 def AlterarContato():
     contato_selecionado = input('Informe o nome do contato que deseja alterar: ')
     try:
@@ -102,7 +102,8 @@ def AlterarContato():
 
 
 
-def ExcluirContato():
+def ExcluirContato(contato_selecionado):
+    contato_selecionado = FiltrarContato()
     try:
         print(f'Deseja Excluir o contato selecionado {VERMELHO}Contato selecionado:{RESET} Nome: {VERDE}{contato_selecionado.nome}{RESET}, Número: {VERDE}{contato_selecionado.numero}{RESET}, Email: {VERDE}{contato_selecionado.email}{RESET}')
         opc = input(': ').upper()

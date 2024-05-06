@@ -26,6 +26,7 @@ class Contato:
 # Ações dos menus de iteração
 
 def AcaoMenu1(): # Menu de apresentação Para criação dos contatos
+    Menu1()
     print(MAGENTA + linha4 + RESET)
     opc = input('Opção: ')
     print(MAGENTA + linha4 + RESET)
@@ -37,6 +38,7 @@ def AcaoMenu1(): # Menu de apresentação Para criação dos contatos
 
 
 def AcaoMenu2(): # seleção do contato para alterações posteriormente
+    Menu2()
     print(MAGENTA + linha4 + RESET)
     FiltrarContato()
     print(MAGENTA + linha4 + RESET)
@@ -45,6 +47,7 @@ def AcaoMenu2(): # seleção do contato para alterações posteriormente
 
 
 def AcaoMenu3(): # Menu de alteração dos contatos
+    Menu3()
     print(MAGENTA + linha4 + RESET)
     opc = input('Opção: ')
     print(MAGENTA + linha4 + RESET)
@@ -53,7 +56,8 @@ def AcaoMenu3(): # Menu de alteração dos contatos
         #MenuAtualizacao()    VERIFICAR
         AlterarContato() 
     elif opc == '2':
-        ExcluirContato()
+        contato_selecionado = FiltrarContato()
+        ExcluirContato(contato_selecionado)
 
 
 #def AcaoMenuAtualizacao():  PRECISO TERMINAR ESSA FUNÇÃO
