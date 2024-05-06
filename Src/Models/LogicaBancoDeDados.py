@@ -3,7 +3,11 @@ from peewee import * # ORM de banco de dados minimalista para python
 from Src.Views.Lines.LinesViews import Lines
 linha1, linha2, linha3, linha4, linha5, linha6, linha7, linha8, linha9, linha10 = Lines()
 
-db = SqliteDatabase('Src/Models/BancoDeDadosContatos.db')
+from Src.Views.Colors.ColorsViews import Cores
+VERMELHO, VERDE, AMARELO, AZUL, MAGENTA, CIANO, BRANCO, RESET = Cores()
+
+
+db = SqliteDatabase('Src/Models/Agenda.db')
 
 class Contato(Model):
     nome = CharField()
@@ -20,7 +24,7 @@ def CriarBancoDeDados():
         db.connect()
         db.create_tables([Contato])
     except Exception as error:
-        print(f'Erro ao criar banco de dados: {error}')
+        print(f'Erro ao criar banco de dados: {VERMELHO}{error}{RESET}')
     else:
         print(f'Banco de dados criado com sucesso!')
     return CriarBancoDeDados
@@ -30,7 +34,7 @@ def CriarContato(nome, numero, email):
     try:
         contato = Contato.create(nome=nome, numero=numero, email=email)
     except Exception as error:
-        print(f'Erro ao criar contato: {error}')
+        print(f'Erro ao criar contato: {VERMELHO}{error}{RESET}')
     else: 
         print('Contato criado com sucesso!')
         
@@ -43,8 +47,11 @@ def ExibirContatos():
     print('{:<5} {:<15} {:<15} {:<15}'.format("ID", "Nome", "Número", "Email"))
     print(linha1)
     
-    for c in Contato.select():
-        print('{:<5} {:<15} {:<15} {:<15}'.format(c.id, c.nome, c.numero, c.email))
+    try:
+        for c in Contato.select():
+            print('{:<5} {:<15} {:<15} {:<15}'.format(c.id, c.nome, c.numero, c.email))
+    except Exception as error:
+        print(f'A sua agenda esta vazia. Erro: {VERMELHO}{error}{RESET}')
     
     print(linha1)
 
@@ -109,6 +116,6 @@ def ExcluirContato():
     try:
         contato.delete_instance()
     except Exception as error:
-        print(f'Ocorreu um erro ao tentar excluir o contato selecionado erro: {error}')
+        print(f'Ocorreu um erro ao tentar excluir o contato selecionado erro: {VERMELHO}{error}{RESET}')
     finally:
         db.close()

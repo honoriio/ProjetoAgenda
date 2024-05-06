@@ -56,7 +56,7 @@ def AcaoMenu3(): # Menu de alteração dos contatos
         ExcluirContato()
 
 
-#def AcaoMenuAualizacao():  PRECISO TERMINAR ESSA FUNÇÃO
+#def AcaoMenuAtualizacao():  PRECISO TERMINAR ESSA FUNÇÃO
 
 
 
@@ -94,7 +94,7 @@ def NovoContato():
     nome = Nome()
     numero = Numero()
     email = Email()
-    #CriarBancoDeDados()
+    CriarBancoDeDados()
     CriarContato(nome, numero, email)
 
 
