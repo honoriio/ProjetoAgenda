@@ -11,7 +11,7 @@ from Src.Controlers.Validation import *
 
 from Src.Models.LogicaBancoDeDados import CriarContato, CriarBancoDeDados, ExibirContatos, FiltrarContato, ExcluirContato
 
-from Src.Views.Interface.InterfaceUsuario import MenuAtualizacao
+from Src.Views.Interface.InterfaceUsuario import *
 
 # Aqui se encontra as funções de logica para  entrada de dados do usuario
 
@@ -96,6 +96,16 @@ def NovoContato():
     email = Email()
     CriarBancoDeDados()
     CriarContato(nome, numero, email)
+
+
+def Main():
+    menuDeApresentacao()
+    Menu1()
+    AcaoMenu1()
+    #Menu2()
+    #AcaoMenu2()
+    #Menu3()
+    #AcaoMenu3()
 
 
     

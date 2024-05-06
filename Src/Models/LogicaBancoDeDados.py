@@ -1,4 +1,5 @@
 from peewee import * # ORM de banco de dados minimalista para python
+import os
 
 from Src.Views.Lines.LinesViews import Lines
 linha1, linha2, linha3, linha4, linha5, linha6, linha7, linha8, linha9, linha10 = Lines()
@@ -21,12 +22,14 @@ class Contato(Model):
 
 def CriarBancoDeDados():
     try:
-        db.connect()
-        db.create_tables([Contato])
+        if not os.path.exists('Src/Models/Agenda.db'):
+            db.connect()
+            db.create_tables([Contato])
+            print(f'{VERDE}Banco de dados criado com sucesso!{RESET}')
     except Exception as error:
         print(f'Erro ao criar banco de dados: {VERMELHO}{error}{RESET}')
     else:
-        print(f'Banco de dados criado com sucesso!')
+        pass
     return CriarBancoDeDados
         
 
@@ -36,7 +39,7 @@ def CriarContato(nome, numero, email):
     except Exception as error:
         print(f'Erro ao criar contato: {VERMELHO}{error}{RESET}')
     else: 
-        print('Contato criado com sucesso!')
+        print(f'{VERDE}Contato criado com sucesso!{RESET}')
         
     return CriarContato
 
