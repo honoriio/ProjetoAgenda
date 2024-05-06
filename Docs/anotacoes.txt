@@ -11,6 +11,4 @@
 
 5- Pesquisar sobre teste atomatizado e criar os testes automatizados para a aplicação que estamos criando
 
-6- Aplicar as validações na função de atualização de dados que esta na logica de banco de dados 
-
-7- Criar a função de excluir contato.
+6- 
