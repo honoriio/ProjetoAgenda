@@ -60,27 +60,23 @@ def ExibirContatos():
 
 
 def FiltrarContato():
-   while True:
-    try:
-        id_contato = int(input('ID: '))
-        contato_selecionado = Contato.get_or_none(Contato.id == id_contato)
-        if contato_selecionado:
-    
-            print(linha1)
-            print("Contato selecionado:", contato_selecionado.nome)
-            print(linha1)
-            break
-        else:
-            print('ID do contato não encontrado. Tente novamente.')
-    except ValueError:
-        print('Por favor, digite um número válido.')
-        
-        return contato_selecionado
-
+  while True:
+        try:
+            id_contato = int(input('ID: '))
+            contato_selecionado = Contato.get_or_none(Contato.id == id_contato)
+            if contato_selecionado:
+                print(linha1)
+                print(f'{VERMELHO}Contato selecionado:{RESET} Nome: {VERDE}{contato_selecionado.nome}{RESET}, Número: {VERDE}{contato_selecionado.numero}{RESET}, Email: {VERDE}{contato_selecionado.email}{RESET}')
+                return contato_selecionado
+            else:
+                print('ID do contato não encontrado. Tente novamente.')
+        except ValueError:
+            print('Por favor, digite um número válido.')
+            
 
 
 # Entender o que essa parte faz exatamente, pois foi corrigida pelo gpt
-def AlterarContato():
+def AlterarContato(contato_selecionado):
     contato_selecionado = input('Informe o nome do contato que deseja alterar: ')
     try:
         contato = Contato.get(Contato.nome == contato_selecionado)
@@ -106,17 +102,15 @@ def AlterarContato():
 
 
 
-def ExcluirContato():
-    contato_selecionado = input('Informe o nome do contato que deseja alterar: ')
+def ExcluirContato(contato_selecionado):
     try:
-        contato = Contato.get(Contato.nome == contato_selecionado)
-        print('Contato excluido com sucesso.')
+        print(f'Deseja Excluir o contato selecionado {VERMELHO}Contato selecionado:{RESET} Nome: {VERDE}{contato_selecionado.nome}{RESET}, Número: {VERDE}{contato_selecionado.numero}{RESET}, Email: {VERDE}{contato_selecionado.email}{RESET}')
+        opc = input(': ').upper()
+        if opc == 'SIM' or opc == 'S':
+            print('Contato excluído com sucesso.')
+            contato_selecionado.delete_instance()
     except Contato.DoesNotExist:
         print('O contato selecionado não existe.')
-        return
-
-    try:
-        contato.delete_instance()
     except Exception as error:
         print(f'Ocorreu um erro ao tentar excluir o contato selecionado erro: {VERMELHO}{error}{RESET}')
     finally:
