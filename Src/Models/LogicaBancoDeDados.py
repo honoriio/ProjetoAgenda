@@ -25,7 +25,6 @@ def CriarBancoDeDados():
         if not os.path.exists('Src/Models/Agenda.db'):
             db.connect()
             db.create_tables([Contato])
-            print(f'{VERDE}Banco de dados criado com sucesso!{RESET}')
     except Exception as error:
         print(f'Erro ao criar banco de dados: {VERMELHO}{error}{RESET}')
     else:
