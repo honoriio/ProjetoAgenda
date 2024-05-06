@@ -9,7 +9,7 @@ from Src.Models.LogicaBancoDeDados import *
 
 from Src.Controlers.Validation import *
 
-from Src.Models.LogicaBancoDeDados import CriarContato, CriarBancoDeDados, ExibirContatos, FiltrarContato
+from Src.Models.LogicaBancoDeDados import CriarContato, CriarBancoDeDados, ExibirContatos, FiltrarContato, ExcluirContato
 
 from Src.Views.Interface.InterfaceUsuario import MenuAtualizacao
 
@@ -53,7 +53,7 @@ def AcaoMenu3(): # Menu de alteração dos contatos
         MenuAtualizacao()
         AlterarContato()
     elif opc == '2':
-        print('ok')
+        ExcluirContato()
 
 
 #def AcaoMenuAualizacao():  PRECISO TERMINAR ESSA FUNÇÃO

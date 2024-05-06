@@ -40,11 +40,11 @@ def CriarContato(nome, numero, email):
 def ExibirContatos():
     print(linha3)
     print(linha1)
-    print("{:<5} {:<15} {:<15} {:<15}".format("ID", "Nome", "Número", "Email"))
+    print('{:<5} {:<15} {:<15} {:<15}'.format("ID", "Nome", "Número", "Email"))
     print(linha1)
     
     for c in Contato.select():
-        print("{:<5} {:<15} {:<15} {:<15}".format(c.id, c.nome, c.numero, c.email))
+        print('{:<5} {:<15} {:<15} {:<15}'.format(c.id, c.nome, c.numero, c.email))
     
     print(linha1)
 
@@ -62,9 +62,9 @@ def FiltrarContato():
             print(linha1)
             break
         else:
-            print("ID do contato não encontrado. Tente novamente.")
+            print('ID do contato não encontrado. Tente novamente.')
     except ValueError:
-        print("Por favor, digite um número válido.")
+        print('Por favor, digite um número válido.')
         
         return contato_selecionado
 
@@ -76,7 +76,7 @@ def AlterarContato():
     try:
         contato = Contato.get(Contato.nome == contato_selecionado)
     except Contato.DoesNotExist:
-        print("O contato selecionado não existe.")
+        print('O contato selecionado não existe.')
         return
     
     opcao = input('Informe o que deseja alterar (nome/número/email): ')
@@ -89,7 +89,7 @@ def AlterarContato():
     elif opcao == 'email':
         contato.email = escolha_usuario
     else:
-        print("Opção inválida.")
+        print('Opção inválida.')
         return
     
     contato.save()
@@ -97,8 +97,18 @@ def AlterarContato():
 
 
 
+def ExcluirContato():
+    contato_selecionado = input('Informe o nome do contato que deseja alterar: ')
+    try:
+        contato = Contato.get(Contato.nome == contato_selecionado)
+        print('Contato excluido com sucesso.')
+    except Contato.DoesNotExist:
+        print('O contato selecionado não existe.')
+        return
 
-
-
-#def ExcluirContato():
-
+    try:
+        contato.delete_instance()
+    except Exception as error:
+        print(f'Ocorreu um erro ao tentar excluir o contato selecionado erro: {error}')
+    finally:
+        db.close()
