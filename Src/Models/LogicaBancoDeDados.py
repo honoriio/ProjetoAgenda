@@ -76,7 +76,7 @@ def FiltrarContato():
 
 
 # Entender o que essa parte faz exatamente, pois foi corrigida pelo gpt
-def AlterarContato(contato_selecionado):
+def AlterarContato():
     contato_selecionado = input('Informe o nome do contato que deseja alterar: ')
     try:
         contato = Contato.get(Contato.nome == contato_selecionado)
@@ -102,7 +102,7 @@ def AlterarContato(contato_selecionado):
 
 
 
-def ExcluirContato(contato_selecionado):
+def ExcluirContato():
     try:
         print(f'Deseja Excluir o contato selecionado {VERMELHO}Contato selecionado:{RESET} Nome: {VERDE}{contato_selecionado.nome}{RESET}, Número: {VERDE}{contato_selecionado.numero}{RESET}, Email: {VERDE}{contato_selecionado.email}{RESET}')
         opc = input(': ').upper()

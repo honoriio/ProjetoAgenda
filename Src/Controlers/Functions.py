@@ -50,8 +50,8 @@ def AcaoMenu3(): # Menu de alteração dos contatos
     print(MAGENTA + linha4 + RESET)
 
     if opc == '1':
-        MenuAtualizacao()
-        AlterarContato()
+        #MenuAtualizacao()    VERIFICAR
+        AlterarContato() 
     elif opc == '2':
         ExcluirContato()
 
@@ -104,8 +104,8 @@ def Main():
     AcaoMenu1()
     #Menu2()
     #AcaoMenu2()
-    #Menu3()
-    #AcaoMenu3()
+    Menu3()
+    AcaoMenu3()
 
 
     

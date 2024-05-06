@@ -25,7 +25,7 @@ def Menu2():
 
 def Menu3():
     print(linha3)
-    print(f'{CIANO}[1]-{RESET}{AZUL}Alterar Dados DO contato.{RESET}')
+    print(f'{CIANO}[1]-{RESET}{AZUL}Alterar Dados do contato.{RESET}')
     print(f'{CIANO}[2]-{RESET}{AZUL}Deletar Contato.{RESET}')
     print(linha3)
 
