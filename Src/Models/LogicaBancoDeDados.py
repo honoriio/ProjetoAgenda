@@ -77,28 +77,36 @@ def FiltrarContato():
 
 # Preciso mudar essa função..... fazer com que a mesma use a função filtrar para selecionar o contato
 def AlterarContato():
-    contato_selecionado = input('Informe o nome do contato que deseja alterar: ')
-    try:
-        contato = Contato.get(Contato.nome == contato_selecionado)
-    except Contato.DoesNotExist:
+    contato_selecionado = FiltrarContato()
+    if not contato_selecionado:
         print('O contato selecionado não existe.')
         return
     
-    opcao = input('Informe o que deseja alterar (nome/número/email): ')
+    
+    print(linha3)
+    print(f'{AZUL}Informe o que deseja alterar.{RESET}')
+    print(linha3)
+    print(f'{CIANO}[1]-{RESET}{AZUL}Nome{RESET}')
+    print(f'{CIANO}[2]-{RESET}{AZUL}Número{RESET}')
+    print(f'{CIANO}[3]-{RESET}{AZUL}Email{RESET}')
+    print(linha3)
+    opcao = input('Opção: ')
+    
     escolha_usuario = input('Informe o novo dado: ')
     
-    if opcao == 'nome':
-        contato.nome = escolha_usuario
-    elif opcao == 'número':
-        contato.numero = escolha_usuario
-    elif opcao == 'email':
-        contato.email = escolha_usuario
+    if opcao == '1':
+        contato_selecionado.nome = escolha_usuario
+    elif opcao == '2':
+        contato_selecionado.numero = escolha_usuario
+    elif opcao == '3':
+        contato_selecionado.email = escolha_usuario
     else:
         print('Opção inválida.')
         return
     
-    contato.save()
-    print('Contato Atualizado:', contato)
+    contato_selecionado.save()
+    print('Contato Atualizado:', contato_selecionado)
+
 
 
 
