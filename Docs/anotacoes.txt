@@ -17,3 +17,7 @@
 
 8- Refatorar a logica do codigo de execução do meu programa inteiro, preciso melhorar a logica do mesmo e tambem mudar a forma da seleção do contato para poder fazer alterações e excluções
 
+9- Corrigir a função alterar contato para que a mesma consiga acessar o valor da variavel contato selecionado para poder fazer as alterações na ordem correta... 
+10- fazer com que a função filtrar contato seja exibida na ordem correta e sem bugs 
+
+
