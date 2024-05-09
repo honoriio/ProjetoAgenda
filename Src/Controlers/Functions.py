@@ -105,7 +105,7 @@ def NovoContato():
 def Main():
     menuDeApresentacao()
     AcaoMenu1()
-    AcaoMenu2()
+    #AcaoMenu2()
     AcaoMenu3()
 
 
