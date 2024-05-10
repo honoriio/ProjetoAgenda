@@ -1,11 +1,12 @@
 #Coisas que precisam ser mudadas no progrma 
 
 
-1- Verificar a logica para caso de dados inseridos errados nos menus do programa 
+1- Verificar a logica para caso de dados inseridos errados nos menus do programa (Checar e criar validações se for necessario.)
 
-2- Refatorar as saidas de dados para os usuarios, pois, esta sendo exebido coisa a mais e coisa errada 
+2- Refatorar as saidas de dados para os usuarios, pois, esta sendo exebido coisa a mais e coisa errada (Parcialemnte feita, preciso terminar a logica, para depois reemprimir os dados))
 
-3- Verificar o por que de estar dadndo erro ao tentar atualizar o numero do contato
+3- Verificar o por que de estar dadndo erro ao tentar atualizar o numero do contato (Verificar agora)  (A sua agenda esta vazia. Erro: [<class 'decimal.ConversionSyntax'>]) esse
+    erro aparece quando eu insiro letras no lugar de numeros quando vou atualizar o contato. (deve ser por causa da validação do banco de dados)
 
 4- Verificar a logica do banco de dados que faz a atualização dos contatos, pois tem algo de errado na hora de atualziar o numero do contato
 
@@ -17,7 +18,16 @@
 
 8- Refatorar a logica do codigo de execução do meu programa inteiro, preciso melhorar a logica do mesmo e tambem mudar a forma da seleção do contato para poder fazer alterações e excluções
 
-9- Corrigir a função alterar contato para que a mesma consiga acessar o valor da variavel contato selecionado para poder fazer as alterações na ordem correta... 
-10- fazer com que a função filtrar contato seja exibida na ordem correta e sem bugs 
+##9- Corrigir a função alterar contato para que a mesma consiga acessar o valor da variavel contato selecionado para poder fazer as alterações na ordem correta...   #Feito
+##10- fazer com que a função filtrar contato seja exibida na ordem correta e sem bugs  #Feito 
+
+##11- corrigir a função de excluir contato, a mesma pede o id duas vezes, ou seja, esta com redundancia, preciso corrigir isso e corrigir a impressão dos dados que serão exclusos.....   #Feito
+
+12- Corrigir a ação apos adicionar um novo contato, pois apos adicionar um novo contato e exibido a opção de selecionar um contato, onde deveria aparecer um menu para seleção
+
+13- Descobrir alguma forma de, retirar a variavel global que estamos usando na função filtrar contato, precisamos achar uma forma de acessar essa varivael nas funções alterar contato
+    e na função excluir contato sem usar variaveis globais....
+
+14- Refatorar as funções de validação, poois as mesmas foram criadas sem tratamentos de erros, ou seja, as mesmas estão com um mal funcionamento...
 
 

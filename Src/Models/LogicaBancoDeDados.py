@@ -60,7 +60,8 @@ def ExibirContatos():
 
 
 def FiltrarContato():
-  while True:
+    global contato_selecionado
+    while True:
         try:
             id_contato = int(input('ID: '))
             contato_selecionado = Contato.get_or_none(Contato.id == id_contato)
@@ -77,7 +78,6 @@ def FiltrarContato():
 
 # Preciso mudar essa função..... fazer com que a mesma use a função filtrar para selecionar o contato
 def AlterarContato():
-    contato_selecionado = FiltrarContato()
     if not contato_selecionado:
         print('O contato selecionado não existe.')
         return
@@ -105,13 +105,10 @@ def AlterarContato():
         return
     
     contato_selecionado.save()
-    print('Contato Atualizado:', contato_selecionado)
+    print('Contato Atualizado:', contato_selecionado.nome)
 
 
-
-
-def ExcluirContato(contato_selecionado):
-    contato_selecionado = FiltrarContato()
+def ExcluirContato():
     try:
         print(f'Deseja Excluir o contato selecionado {VERMELHO}Contato selecionado:{RESET} Nome: {VERDE}{contato_selecionado.nome}{RESET}, Número: {VERDE}{contato_selecionado.numero}{RESET}, Email: {VERDE}{contato_selecionado.email}{RESET}')
         opc = input(': ').upper()

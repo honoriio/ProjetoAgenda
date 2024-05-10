@@ -56,8 +56,7 @@ def AcaoMenu3(): # Menu de alteração dos contatos
         #MenuAtualizacao()    #VERIFICAR
         AlterarContato() 
     elif opc == '2':
-        contato_selecionado = FiltrarContato()
-        ExcluirContato(contato_selecionado)
+        ExcluirContato()
 
 
 #def AcaoMenuAtualizacao():  PRECISO TERMINAR ESSA FUNÇÃO
@@ -77,7 +76,7 @@ def Nome():
 
 def Numero():
     while True:
-        numero = input('Numero Celular: ')
+        numero = int(input('Numero Celular: '))  #(Foi alterado de string para inteiro)    DEVO VERIFICAR TODAS AS FUNÇÕES DE VALIDAÇÃO, POIS TEMOS QUE ACRESCETAR TRATAMENTOS DE ERROS
         print(linha1)
         if ValidarNumero(numero):
             break
@@ -105,7 +104,7 @@ def NovoContato():
 def Main():
     menuDeApresentacao()
     AcaoMenu1()
-    #AcaoMenu2()
+    AcaoMenu2()
     AcaoMenu3()
 
 
