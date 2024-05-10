@@ -18,11 +18,11 @@ def ValidarNome(nome):
     else: 
         return True
 
-def ValidarNumero(numero):
+def ValidarNumero(Numero):
     caracteres_permitidos = set("1234567890")
-    if all(char in caracteres_permitidos for char in numero):
+    if all(char in caracteres_permitidos for char in Numero):
         tam_numero = 11
-        tam_numero_usuario = len(numero)
+        tam_numero_usuario = len(Numero)
         if tam_numero_usuario == tam_numero:
             return True
         else:

@@ -8,7 +8,8 @@
 3- Verificar o por que de estar dadndo erro ao tentar atualizar o numero do contato (Verificar agora)  (A sua agenda esta vazia. Erro: [<class 'decimal.ConversionSyntax'>]) esse
     erro aparece quando eu insiro letras no lugar de numeros quando vou atualizar o contato. (deve ser por causa da validação do banco de dados)
 
-4- Verificar a logica do banco de dados que faz a atualização dos contatos, pois tem algo de errado na hora de atualziar o numero do contato
+4- Verificar a logica do banco de dados que faz a atualização dos contatos, pois tem algo de errado na hora de atualziar o numero do contatoM, aparentente a entrada de dados esta correta
+    vou analisar o que pode ser alterado para que possa ficar melhor.
 
 5- Pesquisar sobre teste atomatizado e criar os testes automatizados para a aplicação que estamos criando
 
@@ -23,7 +24,8 @@
 
 ##11- corrigir a função de excluir contato, a mesma pede o id duas vezes, ou seja, esta com redundancia, preciso corrigir isso e corrigir a impressão dos dados que serão exclusos.....   #Feito
 
-12- Corrigir a ação apos adicionar um novo contato, pois apos adicionar um novo contato e exibido a opção de selecionar um contato, onde deveria aparecer um menu para seleção
+12- Corrigir a ação apos adicionar um novo contato, pois apos adicionar um novo contato e exibido a opção de selecionar um contato, onde deveria aparecer um menu para seleção 
+    Neste caso, eu preciso trabalhar a logica de navegação do programa pelos menus do mesmo... acabei de verificar que não e um BUG e so falta de melhorar a logica mesmo.
 
 13- Descobrir alguma forma de, retirar a variavel global que estamos usando na função filtrar contato, precisamos achar uma forma de acessar essa varivael nas funções alterar contato
     e na função excluir contato sem usar variaveis globais....

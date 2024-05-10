@@ -76,7 +76,7 @@ def Nome():
 
 def Numero():
     while True:
-        numero = int(input('Numero Celular: '))  #(Foi alterado de string para inteiro)    DEVO VERIFICAR TODAS AS FUNÇÕES DE VALIDAÇÃO, POIS TEMOS QUE ACRESCETAR TRATAMENTOS DE ERROS
+        numero = input('Numero Celular: ')  #(Foi alterado de string para inteiro)    DEVO VERIFICAR TODAS AS FUNÇÕES DE VALIDAÇÃO, POIS TEMOS QUE ACRESCETAR TRATAMENTOS DE ERROS
         print(linha1)
         if ValidarNumero(numero):
             break
