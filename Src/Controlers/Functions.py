@@ -29,14 +29,20 @@ class Contato:
 
 def AcaoMenu1(): # Menu de apresentação Para criação dos contatos
     while True:
+        menuDeApresentacao()
         Menu1()
         print(MAGENTA + linha4 + RESET)
         opc = input('Opção: ')
         print(MAGENTA + linha4 + RESET)
+        LimpaTela()
 
         if opc == '1':
+            LimpaTela()
+            MenuAdcionarContato()
             NovoContato()
         elif opc == '2':
+            LimpaTela()
+            MenuListaDeContatos()
             ExibirContatos()
         elif opc == '3':
             print(f'{VERMELHO}Programa encerrado{RESET}')
@@ -118,7 +124,6 @@ def NovoContato():
 
 
 def Main():
-    menuDeApresentacao()
     AcaoMenu1()
     AcaoMenu2()
     AcaoMenu3()

@@ -31,6 +31,18 @@ def Menu3():
     print(linha3)
 
 
+def MenuAdcionarContato():
+    print(linha3)
+    print(f'{MAGENTA}ADICIONAR CONTATO{RESET}'.center(100))
+    print(linha3)
+
+
+def MenuListaDeContatos():
+    print(linha3)
+    print(f'{MAGENTA}LISTA DE CONTATOS{RESET}'.center(100))
+    print(linha3)
+
+
 #def MenuAtualizacao():
  #   print(linha3)
   #  print(f'{CIANO}[1]-{RESET}{AZUL}Nome{RESET}')

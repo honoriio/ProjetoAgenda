@@ -44,7 +44,6 @@ def CriarContato(nome, numero, email):
 
 
 def ExibirContatos():
-    print(linha3)
     print(linha1)
     print('{:<5} {:<15} {:<15} {:<15}'.format("ID", "Nome", "Número", "Email"))
     print(linha1)
