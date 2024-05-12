@@ -14,6 +14,7 @@ def menuDeApresentacao():
 def Menu1():
     print(f'{CIANO}[1]{RESET}- {AZUL}Adicionar novo contato.{RESET}')
     print(f'{CIANO}[2]{RESET}- {AZUL}Ver lista de contatos.{RESET}')
+    print(f'{CIANO}[3]{RESET}- {AZUL}Sair')
     print(linha3)
 
 

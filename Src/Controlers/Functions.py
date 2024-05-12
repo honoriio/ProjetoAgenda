@@ -5,6 +5,8 @@ linha1, linha2, linha3, linha4, linha5, linha6, linha7, linha8, linha9, linha10 
 from Src.Views.Colors.ColorsViews import Cores
 VERMELHO, VERDE, AMARELO, AZUL, MAGENTA, CIANO, BRANCO, RESET = Cores()
 
+import time
+
 from Src.Models.LogicaBancoDeDados import *
 
 from Src.Controlers.Validation import *
@@ -26,15 +28,21 @@ class Contato:
 # Ações dos menus de iteração
 
 def AcaoMenu1(): # Menu de apresentação Para criação dos contatos
-    Menu1()
-    print(MAGENTA + linha4 + RESET)
-    opc = input('Opção: ')
-    print(MAGENTA + linha4 + RESET)
+    while True:
+        Menu1()
+        print(MAGENTA + linha4 + RESET)
+        opc = input('Opção: ')
+        print(MAGENTA + linha4 + RESET)
 
-    if opc == '1':
-        NovoContato()
-    elif opc == '2':
-        ExibirContatos()
+        if opc == '1':
+            NovoContato()
+        elif opc == '2':
+            ExibirContatos()
+        elif opc == '3':
+            print(f'{VERMELHO}Programa encerrado{RESET}')
+            time.sleep(2)
+            LimpaTela()
+            break
 
 
 def AcaoMenu2(): # seleção do contato para alterações posteriormente
@@ -61,6 +69,14 @@ def AcaoMenu3(): # Menu de alteração dos contatos
 
 #def AcaoMenuAtualizacao():  PRECISO TERMINAR ESSA FUNÇÃO
 
+
+def LimpaTela():
+    import platform
+    system = platform.system()
+    if system == 'Windows':
+        os.system('cls')
+    else:
+        os.system('clear')
 
 
 # Coleta dos dados do usuario
