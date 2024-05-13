@@ -8,8 +8,9 @@
 3- Verificar o por que de estar dadndo erro ao tentar atualizar o numero do contato (Verificar agora)  (A sua agenda esta vazia. Erro: [<class 'decimal.ConversionSyntax'>]) esse
     erro aparece quando eu insiro letras no lugar de numeros quando vou atualizar o contato. (deve ser por causa da validação do banco de dados)
 
-4- Verificar a logica do banco de dados que faz a atualização dos contatos, pois tem algo de errado na hora de atualziar o numero do contatoM, aparentente a entrada de dados esta correta
-    vou analisar o que pode ser alterado para que possa ficar melhor.
+###4- Verificar a logica do banco de dados que faz a atualização dos contatos, pois tem algo de errado na hora de atualziar o numero do contatoM, aparentente a entrada de dados esta correta
+    vou analisar o que pode ser alterado para que possa ficar melhor.##FEITO, porem, o mesmo precisa de tratamentos de erro pois, quando inserido um numero que ja esta filiado a um contato
+    o programa quebra.... item esta para ser revisado no item 20 da lista
 
 5- Pesquisar sobre teste atomatizado e criar os testes automatizados para a aplicação que estamos criando
 
@@ -42,3 +43,10 @@
 
 19- Problema ao executar a função FiltrarContato, a mesma não executa por causa do loop...
         Possivel resolução, acabar de implmentar as opções de açõa liadas ao menu de filtrar contato.
+
+
+20- Preciso adicionar tratamentos de erros na hora de fazer a alteração dos dados do contato (no caso, na hora de alterar usando a função alterar dados)
+
+21- Arrumar inconsistencias visuais na função de filtrar contato, a mesma apresenta cores que não deveriam estar la. 
+
+22- 

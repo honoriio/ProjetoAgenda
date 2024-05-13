@@ -53,6 +53,7 @@ def AcaoMenu1(): # Menu de apresentação Para criação dos contatos
                     FiltrarContato()
                     print(MAGENTA + linha3 + RESET)
                     AlterarContato()
+                    time.sleep(1)
                     break
                 elif opc  == '2':
                     break  # Sai do loop de exibição e volta ao menu anterior
