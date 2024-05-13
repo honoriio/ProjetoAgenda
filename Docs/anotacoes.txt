@@ -55,9 +55,10 @@
         no caso, iremos mudar para seleção por numero de opção.
 
                                         @@ PRIORIDADES @@
-                                        
+
 24 - Refatorar o codigo da parte dos menus 
         idea do que fazer:
             vou criar toda a logica de loops em cada função, e posteriormente, chamar cada função na ordem correta no aquivo main
             vou ter que analisar tudo isso e ver como vai ficar. 
-
+            
+24 - Fazer os teste de cada função usando o if __name__ = 'main' $ Isso e usado para testar a função sem executar o programa todo $
