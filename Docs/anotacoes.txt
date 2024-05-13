@@ -3,7 +3,7 @@
 
 1- Verificar a logica para caso de dados inseridos errados nos menus do programa (Checar e criar validações se for necessario.)
 
-2- Refatorar as saidas de dados para os usuarios, pois, esta sendo exebido coisa a mais e coisa errada (Parcialemnte feita, preciso terminar a logica, para depois reemprimir os dados))
+##2- Refatorar as saidas de dados para os usuarios, pois, esta sendo exebido coisa a mais e coisa errada (Parcialemnte feita, preciso terminar a logica, para depois reemprimir os dados)) #FEITO....  
 
 3- Verificar o por que de estar dadndo erro ao tentar atualizar o numero do contato (Verificar agora)  (A sua agenda esta vazia. Erro: [<class 'decimal.ConversionSyntax'>]) esse
     erro aparece quando eu insiro letras no lugar de numeros quando vou atualizar o contato. (deve ser por causa da validação do banco de dados)
@@ -32,4 +32,13 @@
 
 14- Refatorar as funções de validação, poois as mesmas foram criadas sem tratamentos de erros, ou seja, as mesmas estão com um mal funcionamento...
 
+##15- Correção da função de selecionar contator esta apaerecendo coisas erradas, devo verificar e ajustar esses erros #FEITO....
 
+##16- Cria uma função de loop para que o usuari consiga navegar de dentro do app sem ter que executar o mesmo a todo momento.  #FEITO....
+
+17- Devo fazer a junção dos 3 menus em apenas um, fazendo com que fique mais facil de, fazer a logica por tras de toda a navegação do usuario pelo programa
+
+18- Fazer uma verificação geral de todos os dados que estao sendo exibidos para o usuario, para que não seja exibida informações repetidas e confusas para o usuario.
+
+19- Problema ao executar a função FiltrarContato, a mesma não executa por causa do loop...
+        Possivel resolução, acabar de implmentar as opções de açõa liadas ao menu de filtrar contato.

@@ -5,22 +5,23 @@ linha1, linha2, linha3, linha4, linha5, linha6, linha7, linha8, linha9, linha10 
 
 VERMELHO, VERDE, AMARELO, AZUL, MAGENTA, CIANO, BRANCO, RESET = Cores()
 
-def menuDeApresentacao():
+def menuDeApresentacao(): # Faz a apresentação do nome do programa e a sua versão
     print(linha3)
     print(f'{MAGENTA}AGENDA DE CONTATOS{RESET} {VERDE}V1.1.2{RESET}'.center(120))
     print(linha3)
 
 
-def Menu1():
+def Menu1(): # Ações do menu de criar contatos e ver lista de contatos 
     print(f'{CIANO}[1]{RESET}- {AZUL}Adicionar novo contato.{RESET}')
     print(f'{CIANO}[2]{RESET}- {AZUL}Ver lista de contatos.{RESET}')
-    print(f'{CIANO}[3]{RESET}- {AZUL}Sair')
+    print(f'{CIANO}[3]{RESET}- {AZUL}Sair{RESET}')
     print(linha3)
 
 
-def Menu2():
+def Menu2(): # Menu responsalvel por selecionar o contato
     print(linha3)
-    print(f'{CIANO}[*]-{RESET}{AZUL}Selecione o contato{RESET}')
+    print(f'{CIANO}[1]-{RESET}{AZUL}Selecione o contato{RESET}')
+    print(f'{CIANO}[2]-{RESET}{AZUL}Voltar{RESET}')
     print(linha3)
 
 

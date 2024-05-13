@@ -34,28 +34,32 @@ def AcaoMenu1(): # Menu de apresentação Para criação dos contatos
         LimpaTela()
         menuDeApresentacao()
         Menu1()
-        print(MAGENTA + linha4 + RESET)
         opc = input('Opção: ')
-        print(MAGENTA + linha4 + RESET)
-        LimpaTela()
 
         if opc == '1':
             LimpaTela()
             MenuAdcionarContato()
             NovoContato()
+
         elif opc == '2':
             while True:  # Loop para exibir os contatos e permitir voltar
                 LimpaTela()
                 MenuListaDeContatos()
                 ExibirContatos()
-                print(f'{CIANO}[1]-{RESET}{AZUL}Voltar{RESET}')
-                print(linha1)
+                Menu2()
                 opc = input('Opção: ')
-                if opc  == '1':
+                if opc == '1':
+                    print(MAGENTA + linha3 + RESET)
+                    FiltrarContato()
+                    print(MAGENTA + linha3 + RESET)
+                    AlterarContato()
+                    break
+                elif opc  == '2':
                     break  # Sai do loop de exibição e volta ao menu anterior
                 else:
                     print(f'{VERMELHO}Opção inválida!{RESET}')
         elif opc == '3':
+            LimpaTela()
             print(VERMELHO + linha3 + RESET) 
             print(f'{VERMELHO}Programa encerrado{RESET}'.center(100))
             print(VERMELHO + linha3 + RESET)
