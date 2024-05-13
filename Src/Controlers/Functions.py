@@ -31,7 +31,6 @@ class Contato:
 
 def AcaoMenu1(): # Menu de apresentação Para criação dos contatos
     while True:
-        time.sleep(1)
         LimpaTela()
         menuDeApresentacao()
         Menu1()
@@ -45,9 +44,17 @@ def AcaoMenu1(): # Menu de apresentação Para criação dos contatos
             MenuAdcionarContato()
             NovoContato()
         elif opc == '2':
-            LimpaTela()
-            MenuListaDeContatos()
-            ExibirContatos()
+            while True:  # Loop para exibir os contatos e permitir voltar
+                LimpaTela()
+                MenuListaDeContatos()
+                ExibirContatos()
+                print(f'{CIANO}[1]-{RESET}{AZUL}Voltar{RESET}')
+                print(linha1)
+                opc = input('Opção: ')
+                if opc  == '1':
+                    break  # Sai do loop de exibição e volta ao menu anterior
+                else:
+                    print(f'{VERMELHO}Opção inválida!{RESET}')
         elif opc == '3':
             print(VERMELHO + linha3 + RESET) 
             print(f'{VERMELHO}Programa encerrado{RESET}'.center(100))
@@ -55,6 +62,7 @@ def AcaoMenu1(): # Menu de apresentação Para criação dos contatos
             time.sleep(2)
             LimpaTela()
             sys.exit()
+
 
 
 def AcaoMenu2(): # seleção do contato para alterações posteriormente
