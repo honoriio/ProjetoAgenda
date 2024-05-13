@@ -1,6 +1,7 @@
 from peewee import * # ORM de banco de dados minimalista para python
 import os
 
+from Src.Views.Interface.InterfaceUsuario import MenuExcluirContato
 from Src.Views.Lines.LinesViews import Lines
 linha1, linha2, linha3, linha4, linha5, linha6, linha7, linha8, linha9, linha10 = Lines()
 
@@ -109,9 +110,14 @@ def AlterarContato():
 
 def ExcluirContato():
     try:
-        print(f'Deseja Excluir o contato selecionado {VERMELHO}Contato selecionado:{RESET} Nome: {VERDE}{contato_selecionado.nome}{RESET}, Número: {VERDE}{contato_selecionado.numero}{RESET}, Email: {VERDE}{contato_selecionado.email}{RESET}')
-        opc = input(': ').upper()
-        if opc == 'SIM' or opc == 'S':
+        print(linha1)
+        print(f'Contato Selecionado {VERMELHO}Contato selecionado:{RESET} Nome: {VERDE}{contato_selecionado.nome}{RESET}, Número: {VERDE}{contato_selecionado.numero}{RESET}, Email: {VERDE}{contato_selecionado.email}{RESET}')
+        print(linha1)
+        print('Realmente Deseja Excluir o Contato Selecionado?')
+        print(linha1)
+        MenuExcluirContato()
+        opc = input('Opção: ')
+        if opc == '1':
             print('Contato excluído com sucesso.')
             contato_selecionado.delete_instance()
     except Contato.DoesNotExist:

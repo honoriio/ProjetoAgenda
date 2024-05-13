@@ -52,9 +52,17 @@ def AcaoMenu1(): # Menu de apresentação Para criação dos contatos
                     print(MAGENTA + linha3 + RESET)
                     FiltrarContato()
                     print(MAGENTA + linha3 + RESET)
-                    AlterarContato()
-                    time.sleep(1)
-                    break
+                    Menu3()
+                    opc = input('Opção: ')
+                    if opc == '1':
+                        LimpaTela()
+                        AlterarContato()  #Acrescentar um menu de seleção aqui para selecionar entre alterar ou excluir contato
+                        time.sleep(1)
+                        break
+                    elif opc == '2':
+                        ExcluirContato()
+                        time.sleep(1)
+                        break
                 elif opc  == '2':
                     break  # Sai do loop de exibição e volta ao menu anterior
                 else:
@@ -144,9 +152,6 @@ def NovoContato():
 
 def Main():
     AcaoMenu1()
-    AcaoMenu2()
-    AcaoMenu3()
-
 
     
     

@@ -49,4 +49,15 @@
 
 21- Arrumar inconsistencias visuais na função de filtrar contato, a mesma apresenta cores que não deveriam estar la. 
 
-22- 
+##22- Fazer alteração no menu de seleção para ver se ira alterar o contato ou excluir o contato.#FEITO....
+
+23- Fazer alteração na impressão dos dados a serem excluidos e fazer alteração para escolher se deseja de fato excluir ou não 
+        no caso, iremos mudar para seleção por numero de opção.
+
+                                        @@ PRIORIDADES @@
+                                        
+24 - Refatorar o codigo da parte dos menus 
+        idea do que fazer:
+            vou criar toda a logica de loops em cada função, e posteriormente, chamar cada função na ordem correta no aquivo main
+            vou ter que analisar tudo isso e ver como vai ficar. 
+

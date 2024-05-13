@@ -44,12 +44,9 @@ def MenuListaDeContatos():
     print(linha3)
 
 
-#def MenuAtualizacao():
- #   print(linha3)
-  #  print(f'{CIANO}[1]-{RESET}{AZUL}Nome{RESET}')
-   # print(f'{CIANO}[2]-{RESET}{AZUL}Número{RESET}')
-    #print(f'{CIANO}[3]-{RESET}{AZUL}Email{RESET}')
-    #print(linha3)
-
-
-    # REFATORAR AQUI TAMBEM
+def MenuExcluirContato():
+    print(linha3)
+    print(f'{CIANO}[1]{RESET} - {AZUL}SIM{RESET}')
+    print(f'{CIANO}[2]{RESET} - {AZUL}NÃO{RESET}')
+    print(f'{VERMELHO}[3]{RESET} - {AZUL}VOLTAR{RESET}')
+    print(linha3)
