@@ -7,6 +7,8 @@ VERMELHO, VERDE, AMARELO, AZUL, MAGENTA, CIANO, BRANCO, RESET = Cores()
 
 import time
 
+import sys
+
 from Src.Models.LogicaBancoDeDados import *
 
 from Src.Controlers.Validation import *
@@ -29,6 +31,8 @@ class Contato:
 
 def AcaoMenu1(): # Menu de apresentação Para criação dos contatos
     while True:
+        time.sleep(1)
+        LimpaTela()
         menuDeApresentacao()
         Menu1()
         print(MAGENTA + linha4 + RESET)
@@ -45,10 +49,12 @@ def AcaoMenu1(): # Menu de apresentação Para criação dos contatos
             MenuListaDeContatos()
             ExibirContatos()
         elif opc == '3':
-            print(f'{VERMELHO}Programa encerrado{RESET}')
+            print(VERMELHO + linha3 + RESET) 
+            print(f'{VERMELHO}Programa encerrado{RESET}'.center(100))
+            print(VERMELHO + linha3 + RESET)
             time.sleep(2)
             LimpaTela()
-            break
+            sys.exit()
 
 
 def AcaoMenu2(): # seleção do contato para alterações posteriormente
